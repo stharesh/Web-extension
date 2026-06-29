@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Tab</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="background-container">
+    <div id="overlay"></div>
+  </div>
+
+  <main id="app">
+    <!-- Onboarding Section -->
+    <section id="onboarding" class="hidden">
+      <h1>Hello, what's your name?</h1>
+      <input type="text" id="name-input" placeholder="Your name" autocomplete="off" autofocus />
+    </section>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="hidden">
+      <div class="top-row">
+        <div class="focus-mode-toggle-container">
+          <label class="switch" title="Toggle Focus Mode">
+            <input type="checkbox" id="focus-mode-toggle">
+            <span class="slider round"></span>
+          </label>
+          <span class="toggle-label">Focus Mode</span>
+        </div>
+        <button id="settings-btn" title="Settings">⚙</button>
+      </div>
+      
+      <div class="center-content">
+        <h2 id="greeting">Good Morning,</h2>
+        <h1 id="clock">00:00</h1>
+        
+        <div id="focus-container">
+          <div id="focus-prompt">
+            <h3>What is your main focus today?</h3>
+            <input type="text" id="focus-input" autocomplete="off" />
+          </div>
+          <div id="focus-display" class="hidden">
+            <h3>TODAY'S FOCUS</h3>
+            <p>
+              <span id="focus-text"></span>
+              <button id="clear-focus" title="Clear Focus">✕</button>
+            </p>
+          </div>
+        </div>
+        
+        <div id="task-manager">
+          <input type="text" id="task-input" placeholder="New Task (Press Enter)" autocomplete="off" />
+          <ul id="task-list"></ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Settings Modal -->
+  <div id="settings-modal" class="modal hidden">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Settings</h2>
+        <button id="close-settings-btn" class="close-btn">✕</button>
+      </div>
+      
+      <div class="modal-body">
+        <!-- Section 1: Profile -->
+        <section class="settings-section">
+          <h3>Profile</h3>
+          <div class="settings-row">
+            <input type="text" id="settings-name-input" placeholder="Your name">
+            <button id="save-name-btn" class="primary-btn">Save</button>
+          </div>
+        </section>
+
+        <!-- Section 2: Wallpaper -->
+        <section class="settings-section">
+          <h3>Wallpaper</h3>
+          <div class="settings-row">
+            <input type="file" id="wallpaper-upload" accept="image/*">
+            <button id="clear-wallpaper-btn" class="secondary-btn">Reset Default</button>
+          </div>
+          <div id="upload-toast" class="toast hidden"></div>
+        </section>
+
+        <!-- Section 3: Blocked Websites -->
+        <section class="settings-section">
+          <h3>Blocked Websites (Focus Mode)</h3>
+          <div class="settings-row">
+            <input type="text" id="block-domain-input" placeholder="e.g. reddit.com">
+            <button id="add-domain-btn" class="primary-btn">Add</button>
+          </div>
+          <ul id="settings-block-list"></ul>
+          <button id="restore-defaults-btn" class="secondary-btn" style="margin-top: 10px;">Restore Defaults</button>
+        </section>
+
+        <!-- Section 4: Danger Zone -->
+        <section class="settings-section danger-zone">
+          <h3>Danger Zone</h3>
+          <button id="reset-all-btn" class="danger-btn">Reset Everything</button>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
