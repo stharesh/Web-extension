@@ -1,4 +1,4 @@
-# Momentum-Style Personal Productivity Chrome Extension - Task List
+# Daily Focus Dashboard Chrome Extension - Task List
 
 This document breaks down the PRD into atomic, phase-based tasks with clear dependencies.
 

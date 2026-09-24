@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Momentum Dashboard",
+  "name": "Daily Focus Dashboard",
   "version": "1.0",
-  "description": "Replaces the New Tab page with a beautiful personal productivity dashboard.",
+  "description": "A personalized new-tab dashboard for daily focus, lightweight tasks, and distraction blocking.",
   "chrome_url_overrides": {
     "newtab": "index.html"
   },
