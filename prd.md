@@ -1,4 +1,4 @@
-# PRD: Momentum-Style Personal Productivity Chrome Extension
+# PRD: Daily Focus Dashboard Chrome Extension
 
 # Version
 
